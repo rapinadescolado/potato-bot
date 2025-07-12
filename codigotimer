@@ -1,0 +1,30 @@
+$var[horario;$randomText[dia;noite]]
+$var[clima;$randomText[chuva;ensolarado;nublado]]
+
+$if[$var[horario]==dia]
+    $if[$getServerVar[horario]==dia]
+        $var[description;$randomText[O sol continua pairando no céu... O que é bem estranho, já que dias não deveriam durar tanto.;Se você é um Vampiro, sinto em te dizer que o sol ainda ta te buscando lá fora;Acho que o sol quis fazer hora extra, então você vai ter que esperar mais caso queira uma noite.;Sol não quis ir embora, briga com ele não comigo.]]
+    $else
+        $var[description;$randomText[O sol nasceu, finalmente. Acho que a noite já tava te incomodando.;É um pássaro? É um avião? Não! É o maldito sol.;Vampiros, peguem suas sombrinhas, vocês precisarão kkkkkkkkkkkk.;O sol chegou rapaziada.]]
+    $endif
+    $setServerVar[horario;dia]
+    $var[cor;110d29]
+$else
+    $if[$getServerVar[horario]==noite]
+        $var[description;$randomText[A lua só falou "tsk tsk tsk..." e ficou ali.;O sol ta um pouco irritado, já que chegou a vez dele só que a lua não quis passar o celular.;To achando que a lua decidiu ficar mais um pouquinho, ebaaaaaa.;Ta vendo aquela lua que brilha lá no céu, se você me pedir eu vou buscar só pra te iiiiixi la ele]]
+    $else
+        $var[description;$randomText[Tchau tchau sol!!! E oláaa luaaaa!!;Ta ouvindo esse barulho? É o som dos lobisomens contentes com a chegada da lua.;A lua, novamente sem educação, só saiu empurrando o sol e tomou o lugar dele.;A lua chegou rapaziada.;Olha só quem chegou, acho que tinha uma galera com saudade de você lua.]]
+    $endif
+    $setServerVar[horario;noite]
+    $var[cor;768bf5]
+$endif
+
+$sendEmbedMessage[$channelID;
+@everyone;
+**$calculate[time*10]** Minutos se passaram!;;
+$var[description];
+$var[cor];
+Tick tack tick tack...;
+https://cdn-icons-png.flaticon.com/512/4305/4305432.png;;;
+$var[thumbnail];
+$var[image];;]
