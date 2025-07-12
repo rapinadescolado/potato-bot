@@ -28,3 +28,5 @@ Tick tack tick tack...;
 https://cdn-icons-png.flaticon.com/512/4305/4305432.png;;;
 $var[thumbnail];
 $var[image];;]
+
+$var[time;$sum[$var[time];1]]
