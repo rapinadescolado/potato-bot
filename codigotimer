@@ -1,7 +1,7 @@
 $var[horario;$randomText[dia;noite]]
-$var[clima;$randomText[chuva;limpo;nublado]]
+$var[clima;$random[1;31]]
 
-$if[$var[horario]==dia]
+$if[$var[horario]<=dia]
     $if[$getServerVar[horario]==dia]
         $var[description;$randomText[O sol continua pairando no céu... O que é bem estranho, já que dias não deveriam durar tanto.;Se você é um Vampiro, sinto em te dizer que o sol ainda ta te buscando lá fora;Acho que o sol quis fazer hora extra, então você vai ter que esperar mais caso queira uma noite.;Sol não quis ir embora, briga com ele não comigo.]]
     $else
@@ -21,7 +21,7 @@ $else
     $var[thumbnail;https://media.discordapp.net/attachments/1160708082461061160/1393713194983362700/lua.png?ex=68742c0f&is=6872da8f&hm=1ac4230da4b1e83694a56cf7a7b835f4c215ccee27acefb6e8cbe2fe1c5eca63&=&format=webp&quality=lossless&width=165&height=165]
 $endif
 
-$if[$var[clima]==chuva]
+$if[$var[clima]<=10]
     $if[$getServerVar[clima]==chuva]
         $var[description;$var[description]
         
@@ -32,7 +32,7 @@ $if[$var[clima]==chuva]
         Uma grande chuva se aproxima.]
     $endif
     $setServerVar[clima;chuva]
-$elseif[$var[clima]==limpo]
+$elseif[$var[clima]<=20]
     $if[$getServerVar[clima]==limpo]
         $var[description;$var[description]
         
