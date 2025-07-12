@@ -1,7 +1,7 @@
-$var[horario;$randomText[dia;noite]]
+$var[horario;$random[1;11]]
 $var[clima;$random[1;31]]
 
-$if[$var[horario]<=dia]
+$if[$var[horario]<=5]
     $if[$getServerVar[horario]==dia]
         $var[description;$randomText[O sol continua pairando no céu... O que é bem estranho, já que dias não deveriam durar tanto.;Se você é um Vampiro, sinto em te dizer que o sol ainda ta te buscando lá fora;Acho que o sol quis fazer hora extra, então você vai ter que esperar mais caso queira uma noite.;Sol não quis ir embora, briga com ele não comigo.]]
     $else
