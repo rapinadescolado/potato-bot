@@ -8,7 +8,7 @@ $if[$var[horario]==dia]
         $var[description;$randomText[O sol nasceu, finalmente. Acho que a noite já tava te incomodando.;É um pássaro? É um avião? Não! É o maldito sol.;Vampiros, peguem suas sombrinhas, vocês precisarão kkkkkkkkkkkk.;O sol chegou rapaziada.]]
     $endif
     $setServerVar[horario;dia]
-    $var[cor;110d29]
+    $var[cor;a4e1ed]
     $var[thumbnail;https://media.discordapp.net/attachments/1160708082461061160/1393713195432280174/sol.png?ex=68742c0f&is=6872da8f&hm=9024837bbf384fd01ce239a76867270feff29679458b59468ce35235208b2d5a&=&format=webp&quality=lossless&width=230&height=230]
 $else
     $if[$getServerVar[horario]==noite]
@@ -17,7 +17,7 @@ $else
         $var[description;$randomText[Tchau tchau sol!!! E oláaa luaaaa!!;Ta ouvindo esse barulho? É o som dos lobisomens contentes com a chegada da lua.;A lua, novamente sem educação, só saiu empurrando o sol e tomou o lugar dele.;A lua chegou rapaziada.;Olha só quem chegou, acho que tinha uma galera com saudade de você lua.]]
     $endif
     $setServerVar[horario;noite]
-    $var[cor;768bf5]
+    $var[cor;110d29]
     $var[thumbnail;https://media.discordapp.net/attachments/1160708082461061160/1393713194983362700/lua.png?ex=68742c0f&is=6872da8f&hm=1ac4230da4b1e83694a56cf7a7b835f4c215ccee27acefb6e8cbe2fe1c5eca63&=&format=webp&quality=lossless&width=165&height=165]
 $endif
 
