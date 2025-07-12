@@ -1,5 +1,5 @@
 $var[horario;$randomText[dia;noite]]
-$var[clima;$randomText[chuva;ensolarado;nublado]]
+$var[clima;$randomText[chuva;limpo;nublado]]
 
 $if[$var[horario]==dia]
     $if[$getServerVar[horario]==dia]
@@ -19,6 +19,41 @@ $else
     $setServerVar[horario;noite]
     $var[cor;110d29]
     $var[thumbnail;https://media.discordapp.net/attachments/1160708082461061160/1393713194983362700/lua.png?ex=68742c0f&is=6872da8f&hm=1ac4230da4b1e83694a56cf7a7b835f4c215ccee27acefb6e8cbe2fe1c5eca63&=&format=webp&quality=lossless&width=165&height=165]
+$endif
+
+$if[$var[clima]=chuva]
+    $if[$getServerVar[clima]==chuva]
+        $var[description;$var[description]
+        
+        A chuva continua, aparentemente vai demorar pra ela passar.]
+    $else
+        $var[description;$var[description]
+        
+        Uma grande chuva se aproxima.]
+    $endif
+    $setServerVar[clima;chuva]
+$elseif[$var[clima]==limpo]
+    $if[$getServerVar[clima]==limpo]
+        $var[description;$var[description]
+        
+        O céu continua limpo, sem uma única nuvem.]
+    $else
+        $var[description;$var[description]
+        
+        As nuvens vão embora e o céu fica limpo.]
+    $endif
+    $setServerVar[clima;limpo]
+$else
+    $if[$getServerVar[clima]==nublado]
+        $var[description;$var[description]
+        
+        As nuvens continuam preenchendo o céu, produzindo vastas sombras.]
+    $else
+        $var[description;$var[description]
+        
+        Uma grande quantidade de chuvas se aproximam e fecham o céu.]
+    $endif
+    $setServerVar[clima;nublado]
 $endif
 
 
