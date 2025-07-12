@@ -21,7 +21,7 @@ $endif
 
 $sendEmbedMessage[$channelID;
 @everyone;
-**$calculate[time*10]** Minutos se passaram!;;
+**$calculate[$var[time]*10]** Minutos se passaram!;;
 $var[description];
 $var[cor];
 Tick tack tick tack...;
