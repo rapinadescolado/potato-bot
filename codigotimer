@@ -51,7 +51,7 @@ $else
     $else
         $var[description;$var[description]
         
-        Uma grande quantidade de chuvas se aproximam e fecham o céu.]
+        Uma grande quantidade de nuvens se aproximam e fecham o céu.]
     $endif
     $setServerVar[clima;nublado]
 $endif
