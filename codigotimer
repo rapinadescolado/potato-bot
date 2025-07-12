@@ -9,6 +9,7 @@ $if[$var[horario]==dia]
     $endif
     $setServerVar[horario;dia]
     $var[cor;110d29]
+    $var[thumbnail;https://media.discordapp.net/attachments/1160708082461061160/1393713195432280174/sol.png?ex=68742c0f&is=6872da8f&hm=9024837bbf384fd01ce239a76867270feff29679458b59468ce35235208b2d5a&=&format=webp&quality=lossless&width=230&height=230]
 $else
     $if[$getServerVar[horario]==noite]
         $var[description;$randomText[A lua só falou "tsk tsk tsk..." e ficou ali.;O sol ta um pouco irritado, já que chegou a vez dele só que a lua não quis passar o celular.;To achando que a lua decidiu ficar mais um pouquinho, ebaaaaaa.;Ta vendo aquela lua que brilha lá no céu, se você me pedir eu vou buscar só pra te iiiiixi la ele]]
@@ -17,7 +18,10 @@ $else
     $endif
     $setServerVar[horario;noite]
     $var[cor;768bf5]
+    $var[thumbnail;https://media.discordapp.net/attachments/1160708082461061160/1393713194983362700/lua.png?ex=68742c0f&is=6872da8f&hm=1ac4230da4b1e83694a56cf7a7b835f4c215ccee27acefb6e8cbe2fe1c5eca63&=&format=webp&quality=lossless&width=165&height=165]
 $endif
+
+
 
 $sendEmbedMessage[$channelID;
 @everyone;
@@ -25,7 +29,7 @@ $sendEmbedMessage[$channelID;
 $var[description];
 $var[cor];
 Tick tack tick tack...;
-https://cdn-icons-png.flaticon.com/512/4305/4305432.png;;;
+https://media.discordapp.net/attachments/1160708082461061160/1393713195201597515/clock.png?ex=68742c0f&is=6872da8f&hm=ef1d0f0280928457f0bc3fc415a92ab8709490da51db8919fdb0c0b735f77325&=&format=webp&quality=lossless&width=461&height=461;;;
 $var[thumbnail];
 $var[image];;]
 
