@@ -22,32 +22,3 @@ $elseif[$jsonArrayIndex[classe;Lutador]>0]
 $elseif[$jsonArrayIndex[classe;Lutador]>0]
     $var[poder;$sum[$var[poder];5]]
 $endif
-
-
-
-
-
-{
-    "raca":"Humano",
-    "classe":"Nenhum",
-    "items":{
-        "maos":{
-            "maosocupadas":0,
-            "items":[]
-        },
-        "armadura":{
-            "cabeca":"Nenhum",
-            "corpo":"Nenhum",
-            "pes":"Nenhum"
-        }
-    },
-    "maldicoes":[],
-    "monstrosmortos":{
-        "animais":0,
-        "mortosvivos":0,
-        "místicos":0,
-        "artificiais":0
-    },
-    "nivel":0,
-    "poder":0
-}
