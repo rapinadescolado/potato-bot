@@ -1,5 +1,0 @@
-$jsonSet[poder;$sum[$json[poder];3]]
-
-$jsonSet[raca;Vampiro]
-
-$json[]
