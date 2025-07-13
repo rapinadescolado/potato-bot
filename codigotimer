@@ -1,3 +1,7 @@
+$if[$and[$getServerVar[gamestarted]==true;$getServerVar[battlestarted]==false;$getServerVar[currentgameID]==$var[gameID]]==false]
+    $stop
+$endif
+
 $var[horario;$random[1;11]]
 $var[clima;$random[1;31]]
 
