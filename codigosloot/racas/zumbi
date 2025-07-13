@@ -1,1 +1,3 @@
 $jsonSet[poder;$sum[$json[poder];1]]
+
+$jsonSet[raca;Zumbi]
