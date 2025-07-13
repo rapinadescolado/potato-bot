@@ -1,0 +1,53 @@
+$var[inventory;$getUserVar[playerInventory;$authorID]]
+$jsonParse[$var[inventory]]
+$var[poder;0]
+$var[nivel;$json[nivel]]
+
+$if[$json[raca]==Zumbi]
+    $var[poder;1]
+$elseif[$json[raca]==Vampiro]
+    $var[poder;$sum[3;$json[monstrosmortos;animais]]]
+$elseif[$json[raca]==Lobisomem]
+    $var[poder;4]
+$elseif[$json[raca]==Robô]
+    $var[poder;3]
+$elseif[$json[raca]==Anão]
+    $var[poder;2]
+$endif
+
+$if[$jsonArrayIndex[classe;Clérigo]>0]
+    $var[poder;$sum[$var[poder];$json[monstrosmortos;mortosvivos]]]
+$elseif[$jsonArrayIndex[classe;Lutador]>0]
+    $var[poder;$sum[$var[poder];5]]
+$elseif[$jsonArrayIndex[classe;Lutador]>0]
+    $var[poder;$sum[$var[poder];5]]
+$endif
+
+
+
+
+
+{
+    "raca":"Humano",
+    "classe":[],
+    "items":{
+        "maos":{
+            "maosocupadas":0,
+            "items":[]
+        },
+        "armadura":{
+            "cabeca":"Nenhum",
+            "corpo":"Nenhum",
+            "pes":"Nenhum"
+        }
+    },
+    "maldicoes":[],
+    "monstrosmortos":{
+        "animais":0,
+        "mortosvivos":0,
+        "místicos":0,
+        "artificiais":0
+    },
+    "nivel":0,
+    "poder":0
+}
