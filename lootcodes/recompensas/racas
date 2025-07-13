@@ -1,0 +1,6 @@
+$var[racaanterior;$json[raca;nome]]
+
+$if[$var[raca]]
+
+$jsonSet[raca;nome;$var[cartanome]]
+$jsonSet[raca;poder;$var[outros1]]
