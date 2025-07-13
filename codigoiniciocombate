@@ -34,6 +34,7 @@ f7360f;;;;;$userAvatar[$var[winner]];$getVar[wallpaper;$var[winner]];;]
 $setServerVar[battlestarted;false]
 $setServerVar[gamestarted;false]
 $setServerVar[currentgameID;---]
+$resetUserVar[score]
 
 $setVar[frag;$sum[$getVar[frag;$var[winner]];$var[frag]];$var[winner]]
 $setVar[wins;$sum[$getVar[wins;$var[winner]];1];$var[winner]]
