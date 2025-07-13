@@ -1,0 +1,39 @@
+$if[$and[$getServerVar[gamestarted]==true;$getServerVar[battlestarted]==false;$getServerVar[currentgameID]==$var[gameID]]==false]
+    $stop
+$endif
+
+$sendEmbedMessage[$channelID;@everyone;
+**— O período de evolução acabou! —**;;
+*$randomText[Que o combate inicie!;Rip and tear!;Ting ting! O ringue tá liberado;Quem morrer primeiro é gay!;Vou apostar minhas fichas em quem ganhar!];
+f7360f;;
+https://media.discordapp.net/attachments/1160708082461061160/1393713195201597515/clock.png?ex=68742c0f&is=6872da8f&hm=ef1d0f0280928457f0bc3fc415a92ab8709490da51db8919fdb0c0b735f77325&=&format=webp&quality=lossless&width=461&height=461;;;
+https://cdn.discordapp.com/attachments/1160708082461061160/1393984568595579020/1643160.png?ex=687528cc&is=6873d74c&hm=aaa4c9119f706a3cdc15501e18775612c2dced1468c2bba8cbfa1feecf48af14&;;;]
+
+
+$var[winner;$getLeaderboardValue[user;score;asc;1;id]]
+$optOff[
+    $var[frag;$calculate[score + $random[50;151]]]
+    $var[bonus1chance;$random[1;101]]
+    $var[bonus1;$random[1;101]]
+]
+
+
+$sendEmbedMessage[$channelID;@everyone;;;
+
+$randomText[E o vencedor éé.......;Temos um vencedorr!!.....;O último sobrevivente éé......;Rufem os tambores!!.......;O grande!.... O único!.....;Imparável!... Intocável!!.....]
+
+**— $nickname[$var[winner]] —**
+🎉🎉✨🥳🍾🍾🥂🎉
+
+*Recompensas:*
+- ´$randomText[Muito amor e carinho;Um aperto de mão;Uma fanbase de adolescentes malucos;Muitas "Amor" coins.;Reconhecimento;Açucar, tempero, e tudo que há de bom.]´
+- ´+$var[frag] Fragmentos´
+;
+f7360f;;;;;$userAvatar[$var[winner]];$getVar[wallpaper;$var[winner]];;]
+
+$setServerVar[battlestarted;false]
+$setServerVar[gamestarted;false]
+$setServerVar[currentgameID;---]
+
+$setVar[frag;$sum[$getVar[frag;$var[winner]];$var[frag]];$var[winner]]
+$setVar[wins;$sum[$getVar[wins;$var[winner]];1];$var[winner]]
