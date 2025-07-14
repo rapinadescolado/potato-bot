@@ -4,7 +4,7 @@ $endif
 
 $sendEmbedMessage[$channelID;@everyone;
 **— O período de evolução acabou! —**;;
-*$randomText[Que o combate inicie!;Rip and tear!;Ting ting! O ringue tá liberado;Quem morrer primeiro é gay!;Vou apostar minhas fichas em quem ganhar!];
+*$randomText[Que o combate inicie!;Rip and tear!;Ting ting! O ringue tá liberado;Quem morrer primeiro é gay!;Vou apostar minhas fichas em quem ganhar!]*;
 f7360f;;
 https://media.discordapp.net/attachments/1160708082461061160/1393713195201597515/clock.png?ex=68742c0f&is=6872da8f&hm=ef1d0f0280928457f0bc3fc415a92ab8709490da51db8919fdb0c0b735f77325&=&format=webp&quality=lossless&width=461&height=461;;;
 https://cdn.discordapp.com/attachments/1160708082461061160/1393984568595579020/1643160.png?ex=687528cc&is=6873d74c&hm=aaa4c9119f706a3cdc15501e18775612c2dced1468c2bba8cbfa1feecf48af14&;;;]
@@ -18,6 +18,8 @@ $optOff[
 ]
 
 
+$async[combate10sec-timer]
+$replyIn[5s]
 $sendEmbedMessage[$channelID;@everyone;;;
 
 $randomText[E o vencedor éé.......;Temos um vencedorr!!.....;O último sobrevivente éé......;Rufem os tambores!!.......;O grande!.... O único!.....;Imparável!... Intocável!!.....]
@@ -30,6 +32,9 @@ $randomText[E o vencedor éé.......;Temos um vencedorr!!.....;O último sobrevi
 - ´+$var[frag] Fragmentos´
 ;
 f7360f;;;;;$userAvatar[$var[winner]];$getVar[wallpaper;$var[winner]];;]
+$endasync
+
+$await[combate10sec-timer]
 
 $setServerVar[battlestarted;false]
 $setServerVar[gamestarted;false]
