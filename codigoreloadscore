@@ -1,7 +1,7 @@
 $var[inventory;$getUserVar[playerInventory;$authorID]]
 $jsonParse[$var[inventory]]
-$var[poder;0]
-$var[nivel;$json[nivel]]
+
+
 
 $if[$json[raca]==Zumbi]
     $var[poder;1]
